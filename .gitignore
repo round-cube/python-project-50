@@ -1,0 +1,8 @@
+# Python bytecode
+*.pyc
+
+# virtualenv dir
+.venv
+
+# artefacts dir
+dist
