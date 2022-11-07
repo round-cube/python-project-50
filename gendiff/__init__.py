@@ -31,9 +31,14 @@ def generate_diff(file_path1, file_path2):
 
     source_keys = set(source.keys())
     compared_keys = set(compared_to.keys())
-    for key in compared_keys - source_keys:
-        text_diff = f"  + {key}: {compared_to[key]}"
+    for new_key in compared_keys - source_keys:
+        new_value = sanitize_bool(compared_to[new_key])
+        text_diff = f"  + {new_key}: {new_value}"
         key_text_diffs.append(text_diff)
+
+
+    key_text_diffs.append('}')
+    key_text_diffs.insert(0, '{')
 
     full_text_diff = '\n'.join(key_text_diffs)
     return full_text_diff
