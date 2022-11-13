@@ -1,4 +1,4 @@
-import json
+from gendiff.files import open_file
 
 
 def sanitize_bool(value):
@@ -8,11 +8,7 @@ def sanitize_bool(value):
 
 
 def generate_diff(file_path1, file_path2):
-    with open(file_path1) as f:
-        source = json.load(f)
-
-    with open(file_path2) as f:
-        compared_to = json.load(f)
+    source, compared_to = open_file(file_path1), open_file(file_path2)
 
     key_text_diffs = []
     for source_key in source:
