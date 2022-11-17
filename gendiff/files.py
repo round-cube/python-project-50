@@ -11,8 +11,10 @@ YAML_EXTENSIONS = (".yaml", ".yml")
 JSON_EXTENSIONS = (".json",)
 SUPPORTED_EXTENSIONS = YAML_EXTENSIONS + JSON_EXTENSIONS
 
-BAD_EXCEPTION_TEXT = "File {0} has unaccepted extension type. " \
-                     f"Supported extension types are: [{','.join(SUPPORTED_EXTENSIONS)}]."
+BAD_EXCEPTION_TEXT = (
+    "File {0} has unaccepted extension type. "
+    f"Supported extension types are: [{','.join(SUPPORTED_EXTENSIONS)}]."
+)
 
 
 def open_file(path):
@@ -26,4 +28,3 @@ def open_file(path):
             return load_json(f)
         else:
             raise BadExtension(BAD_EXCEPTION_TEXT.format(path))
-

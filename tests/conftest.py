@@ -16,4 +16,3 @@ def diff_result(request):
     file_path = request.param
     with open(f"tests/files/{file_path}") as f:
         yield f.read()
-

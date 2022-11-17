@@ -2,7 +2,7 @@ install:
 	poetry install
 
 run:
-	poetry run gendiff tests/files/file1.json tests/files/file2.json
+	poetry run gendiff tests/files/plain/file1.json tests/files/plain/file2.json
 
 build:
 	poetry build
@@ -18,4 +18,3 @@ lint:
 
 test:
 	poetry run python -m pytest -vvv
-

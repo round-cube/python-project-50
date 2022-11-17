@@ -7,9 +7,7 @@ DESCRIPTION = "Compares two configuration files and shows a difference."
 
 
 def build_parser():
-    parser = ArgumentParser(
-        prog=NAME,
-        description=DESCRIPTION)
+    parser = ArgumentParser(prog=NAME, description=DESCRIPTION)
 
     parser.add_argument("first_file")
     parser.add_argument("second_file")
