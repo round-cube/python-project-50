@@ -39,6 +39,18 @@ STYLISH_MARKS = [
         "nested/expected_plain.txt",
         "plain",
     ),
+    (
+        "nested/file1.json",
+        "nested/file2.json",
+        "nested/expected_json.json",
+        "json",
+    ),
+    (
+        "nested/file1.yaml",
+        "nested/file2.yaml",
+        "nested/expected_json.json",
+        "json",
+    ),
 ]
 
 

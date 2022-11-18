@@ -2,8 +2,9 @@ from gendiff.files import open_file
 from gendiff.diff_entries import DiffEntriesGenerator, sort_by_key
 from gendiff.formatters import stylish
 from gendiff.formatters import plain
+from gendiff.formatters import json
 
-SUPPORTED_FORMATTERS = ["stylish", "plain"]
+SUPPORTED_FORMATTERS = ["stylish", "plain", "json"]
 SUPPORTED_FORMATTERS_EXC = f"Supported formatters: {SUPPORTED_FORMATTERS}."
 
 
@@ -15,6 +16,8 @@ def generate_diff(file_path1, file_path2, formatter):
         formatter = stylish
     elif formatter == "plain":
         formatter = plain
+    elif formatter == "json":
+        formatter = json
     else:
         raise ValueError(SUPPORTED_FORMATTERS_EXC)
 

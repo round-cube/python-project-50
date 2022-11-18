@@ -75,6 +75,6 @@ def _get_plain_log(sorted_diff_entries, key_path=[]):
     return plain_log
 
 
-def format_diff_entries(sorted_diff_entries):
-    plain_log = _get_plain_log(sorted_diff_entries)
+def format_diff_entries(diff_entries):
+    plain_log = _get_plain_log(diff_entries)
     return "\n".join(plain_log)

@@ -15,7 +15,7 @@ def build_parser():
         "-f",
         "--format",
         help="set format of output",
-        choices=["stylish", "plain"],
+        choices=["stylish", "plain", "json"],
         default="stylish",
     )
     return parser
