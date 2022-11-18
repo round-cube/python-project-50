@@ -8,7 +8,7 @@ SUPPORTED_FORMATTERS = ["stylish", "plain", "json"]
 SUPPORTED_FORMATTERS_EXC = f"Supported formatters: {SUPPORTED_FORMATTERS}."
 
 
-def generate_diff(file_path1, file_path2, formatter):
+def generate_diff(file_path1, file_path2, format_name="stylish"):
     source, compared_to = open_file(file_path1), open_file(file_path2)
     diff_entries = DiffEntriesGenerator(source, compared_to).get_entries()
     sorted_diff_entries = sort_by_key(diff_entries)
