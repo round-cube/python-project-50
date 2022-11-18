@@ -102,7 +102,7 @@ def _process_added_diff_entries(diff_entry, level):
 ENTRY_PROCESSOR = {
     "updated": _process_updated_diff_entries,
     "removed": _process_removed_diff_entries,
-    "added": _process_added_diff_entries
+    "added": _process_added_diff_entries,
 }
 
 
@@ -122,8 +122,9 @@ def format_diff_entries(diff_entries, level=0):
                 key = diff_entry["key"]
                 children = value
                 nested_level = level + 1
-                formatted_value = format_diff_entries(children,
-                                                      level=nested_level)
+                formatted_value = format_diff_entries(
+                    children, level=nested_level
+                )
                 indent = _get_indent_by_level(level)
                 entry_line = _indent_string(f"{key}: {formatted_value}", indent)
                 entry_lines = [entry_line]

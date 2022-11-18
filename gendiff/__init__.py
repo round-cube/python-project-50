@@ -6,6 +6,7 @@ from gendiff.formatters import plain
 SUPPORTED_FORMATTERS = ["stylish", "plain"]
 SUPPORTED_FORMATTERS_EXC = f"Supported formatters: {SUPPORTED_FORMATTERS}."
 
+
 def generate_diff(file_path1, file_path2, formatter):
     source, compared_to = open_file(file_path1), open_file(file_path2)
     diff_entries = DiffEntriesGenerator(source, compared_to).get_entries()

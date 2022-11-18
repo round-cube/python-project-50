@@ -3,12 +3,42 @@ from gendiff import generate_diff
 
 
 STYLISH_MARKS = [
-    ("plain/file1.json", "plain/file2.json", "plain/expected_result.txt", "stylish"),
-    ("plain/file1.yaml", "plain/file2.yaml", "plain/expected_result.txt", "stylish"),
-    ("nested/file1.json", "nested/file2.json", "nested/expected_stylish.txt", "stylish"),
-    ("nested/file1.yaml", "nested/file2.yaml", "nested/expected_stylish.txt", "stylish"),
-    ("nested/file1.json", "nested/file2.json", "nested/expected_plain.txt", "plain"),
-    ("nested/file1.yaml", "nested/file2.yaml", "nested/expected_plain.txt", "plain"),
+    (
+        "plain/file1.json",
+        "plain/file2.json",
+        "plain/expected_result.txt",
+        "stylish",
+    ),
+    (
+        "plain/file1.yaml",
+        "plain/file2.yaml",
+        "plain/expected_result.txt",
+        "stylish",
+    ),
+    (
+        "nested/file1.json",
+        "nested/file2.json",
+        "nested/expected_stylish.txt",
+        "stylish",
+    ),
+    (
+        "nested/file1.yaml",
+        "nested/file2.yaml",
+        "nested/expected_stylish.txt",
+        "stylish",
+    ),
+    (
+        "nested/file1.json",
+        "nested/file2.json",
+        "nested/expected_plain.txt",
+        "plain",
+    ),
+    (
+        "nested/file1.yaml",
+        "nested/file2.yaml",
+        "nested/expected_plain.txt",
+        "plain",
+    ),
 ]
 
 

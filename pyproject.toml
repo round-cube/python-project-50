@@ -7,7 +7,7 @@ readme = "README.md"
 packages = [{include = "gendiff"}]
 
 [tool.black]
-max-line-length = 80
+line-length = 80
 
 [tool.poetry.scripts]
 gendiff = "gendiff.scripts.gendiff:main"
