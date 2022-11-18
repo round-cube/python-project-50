@@ -1,0 +1,40 @@
+{
+    "key": "common",
+    "value": [
+        {
+            "type": "added",
+            "key": "setting1",
+            "value": "Value 1"
+        },
+        {
+            "key": "setting1",
+            "value": "Value 1"
+        },
+        {
+            "type": "removed",
+            "key": "setting2",
+            "value": 200
+        },
+        {
+            "type": "updated",
+            "key": "setting3",
+            "old_value": true,
+            "new_value": null
+        },
+        {
+            "type": "added",
+            "key": "setting4",
+            "value": "blah blah"
+        },
+        {
+            "type": "added",
+            "key": "setting5",
+            "value": [
+                {
+                    "key": "key5",
+                    "value": "value5"
+                }
+            ]
+        }
+    ]
+}

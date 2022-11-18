@@ -11,13 +11,14 @@ def build_parser():
 
     parser.add_argument("first_file")
     parser.add_argument("second_file")
-    parser.add_argument("-f", "--format", help="set format of output")
+    parser.add_argument("-f", "--format", help="set format of output",
+                        choices=["stylish", "plain"], default="stylish")
     return parser
 
 
 def main():
     parser = build_parser()
     args = parser.parse_args()
-    first_file, second_file = args.first_file, args.second_file
-    diff = generate_diff(first_file, second_file)
+    first_file, second_file, formatter = args.first_file, args.second_file, args.format
+    diff = generate_diff(first_file, second_file, formatter)
     print(diff)
