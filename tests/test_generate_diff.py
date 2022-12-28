@@ -2,7 +2,7 @@ from pytest import mark
 from gendiff import generate_diff
 
 
-STYLISH_MARKS = [
+MARKS = [
     (
         "plain/file1.json",
         "plain/file2.json",
@@ -56,9 +56,9 @@ STYLISH_MARKS = [
 
 @mark.parametrize(
     "file1,file2,diff_result,format",
-    STYLISH_MARKS,
+    MARKS,
     indirect=["file1", "file2", "diff_result"],
 )
-def test_generate_stylish_diff(file1, file2, diff_result, format):
+def test_generate_diff(file1, file2, diff_result, format):
     diff = generate_diff(file1, file2, format)
     assert diff == diff_result
